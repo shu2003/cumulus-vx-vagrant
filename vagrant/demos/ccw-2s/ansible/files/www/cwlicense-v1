@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+expires=1591686000 #2020-06-09
+email=cwlicense@cumulusnetworks.com
+lic_id=L-1189-XXXXYYYY
+NFR=0
+need_eula=0
+account_name=Cumulus Networks CE
+-----BEGIN PGP SIGNATURE-----
+the quick brown fox jumps over the lazy dog
+and stuff and stuff and stuff this is dummy
+content to fill up this space. Of course this
+is not a real license but I think/hope you 
+already knew that.
+-----END PGP SIGNATURE-----
+

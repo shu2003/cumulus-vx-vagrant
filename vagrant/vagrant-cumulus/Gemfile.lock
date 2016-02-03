@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    vagrant-cumulus (0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.4.2)
+    vagrant (1.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  vagrant
+  vagrant-cumulus!

@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  # Stop the Virtualbox NAT interface setting DNS via. DHCP
+  - copy: src=files/leaf/resolv-conf dest=/etc/dhcp/dhclient-enter-hooks.d/resolv-conf owner=root group=root mode=0755
+
+  - name: "Pushing Dummy Shell Script for CL-License"
+    copy: src=files/leaf/cl-license dest=/bin/cl-license
+    
+  - name: "Setting Permissions on CL-License"
+    shell: "chmod 755 /bin/cl-license"    
+          
+

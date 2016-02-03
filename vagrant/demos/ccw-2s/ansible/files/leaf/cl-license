@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "#############################"
+echo "        CL-License"
+echo "#############################"
+echo ""
+echo "  NOTE: "
+echo "CL-License has no Hardware to License in Virtual (VX)"
+echo ""
+
+exit 0

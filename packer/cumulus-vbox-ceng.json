@@ -1,0 +1,138 @@
+{
+  "description": "Create a Vagrant box file from the Cumulus Linux virtual machine appliance",
+  "variables": {
+    "source": "CumulusLinux.ova",
+    "name": "cumulus-vx",
+    "version": "0.0.0",
+    "suffix": "",
+    "setup_args": "",
+    "netmap": "none",
+    "nic_type": "virtio",
+    "intnet": "intnet",
+    "password": "CumulusLinux!"
+  },
+  "builders": [
+    {
+      "type": "virtualbox-ovf",
+      "source_path": "{{user `source`}}",
+      "vm_name": "{{user `name`}}-{{user `version`}}",
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--chipset", "ich9"],
+        ["modifyvm", "{{.Name}}", "--nictype1", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype2", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype3", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype4", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype5", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype6", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype7", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype8", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype9", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype10", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype11", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype12", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype13", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype14", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype15", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype16", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype17", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype18", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype19", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype20", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype21", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype22", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype23", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype24", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype25", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype26", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype27", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype28", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype29", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype30", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype31", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype32", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype33", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype34", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype35", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nictype36", "{{user `nic_type`}}"],
+        ["modifyvm", "{{.Name}}", "--nic1", "nat"],
+        ["modifyvm", "{{.Name}}", "--nic2", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic3", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic4", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic5", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic6", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic7", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic8", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic9", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic10", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic11", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic12", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic13", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic14", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic15", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic16", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic17", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic18", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic19", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic20", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic21", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic22", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic23", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic24", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic25", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic26", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic27", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic28", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic29", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic30", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic31", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic32", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic33", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic34", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic35", "{{user `intnet`}}"],
+        ["modifyvm", "{{.Name}}", "--nic36", "{{user `intnet`}}"]
+      ],
+      "vboxmanage_post": [
+        ["modifyvm", "{{.Name}}", "--ostype", "Linux"]
+      ],
+      "headless": true,
+      "ssh_username": "cumulus",
+      "ssh_password": "{{user `password`}}",
+      "ssh_wait_timeout": "30s",
+      "shutdown_command": "echo '{{user `password`}}' | sudo -S shutdown -h now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "files/init/",
+      "destination": "/tmp"
+    },
+    {
+      "type": "file",
+      "source": "files/maps/{{user `netmap`}}",
+      "destination": "/tmp/eth_remap"
+    },
+    {
+      "type": "file",
+      "source": "files/fake_tools",
+      "destination": "/tmp"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/setup.sh",
+      "execute_command": "chmod +x {{.Path}};echo '{{user `password`}}' | {{.Vars}} sudo -S -E {{.Path}} -v {{user `version`}}{{user `setup_args`}}"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/ceng.sh",
+      "execute_command": "chmod +x {{.Path}};echo '{{user `password`}}' | {{.Vars}} sudo -S -E {{.Path}}"
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "{{user `name`}}-{{user `suffix`}}-vbox.box"
+    }
+  ]
+}

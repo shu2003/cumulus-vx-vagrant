@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#This file is transferred to the Cumulus VX and executed to re-map interfaces
+#Extra config COULD be added here but I would recommend against that to keep this file standard.
+
+sudo su
+mv /home/vagrant/rename_eth_swp /etc/init.d/rename_eth_swp
+mv /home/vagrant/remap_eth /etc/default/remap_eth
+echo -e "\n\nauto vagrant\niface vagrant inet dhcp\n\n" >> /etc/network/interfaces  #add the vagrant interface
+sed -i '/.*iface swp.*/a\    #required for traffic to flow on Bonds in Vbox VMs\n    post-up ip link set $IFACE promisc on' /etc/network/interfaces
+chmod +x /etc/init.d/rename_eth_swp
+reboot &
