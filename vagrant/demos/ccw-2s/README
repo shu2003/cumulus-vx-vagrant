@@ -12,6 +12,7 @@ To use this virtual environment, the following dependencies are required:
 * Virtualbox 5.0+ ( https://www.virtualbox.org/wiki/Downloads )
 * Vagrant 1.7+ ( https://www.vagrantup.com/downloads.html )
 * Vagrant-Cumulus Plugin (install with "vagrant plugin install vagrant-cumulus")
+* Ansible 1.9+ ( http://docs.ansible.com/ansible/intro_installation.html )
 
 # Getting Started
 After installing the software listed above move to this directory and execute the "vagrant up" command. At this point all three devices will boot up and provision the necessary software. When this process is complete run the command "vagrant ssh wbench" to get to the workbench VM.
