@@ -47,7 +47,7 @@ Vagrant.configure(2) do |config|
     end
 
     # Internal management network
-    leaf1.vm.network 'private_network', virtualbox__intnet: 'mgmt', cumulus__intname: 'eth1', type: 'dhcp'
+    leaf1.vm.network 'private_network', virtualbox__intnet: 'mgmt', cumulus__intname: 'eth0', type: 'dhcp'
 
     # Internal network for swp* interfaces.
     leaf1.vm.network 'private_network', virtualbox__intnet: 'swp1', cumulus__intname: 'swp1'
@@ -91,7 +91,7 @@ Vagrant.configure(2) do |config|
     end
 
     # Internal management network
-    leaf2.vm.network 'private_network', virtualbox__intnet: 'mgmt', cumulus__intname: 'eth1', type: 'dhcp'
+    leaf2.vm.network 'private_network', virtualbox__intnet: 'mgmt', cumulus__intname: 'eth0', type: 'dhcp'
 
     # Internal network for swp* interfaces.
     leaf2.vm.network 'private_network', virtualbox__intnet: 'swp1', cumulus__intname: 'swp1'
