@@ -1,6 +1,6 @@
 #!/bin/sh
 make_resolv_conf(){
-    if [ "$interface" == "eth1" ]; then
+    if [ "$interface" == "eth0" ]; then
       exit 0
     fi
 
