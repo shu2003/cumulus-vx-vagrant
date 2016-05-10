@@ -43,8 +43,13 @@ function install_guest_additions
     KERN_VER=$(uname -r)
 
     # Install Guest Additions build dependencies
-    apt-get update
-    apt-get install linux-headers-$KERN_VER
+    if { sudo apt-get update -y 2>&1 || echo E: update failed; } | grep -q '^[WE]:'; then
+        echo "### ERROR: COULD NOT UPDATE REPOS!"
+        exit 100
+    fi
+
+    dpkg --get-selections > /tmp/selections
+    apt-get install -y linux-headers-$KERN_VER
 
     # The current VM image has a dangling symlink which we need to fix up
     ln -sf "/usr/src/linux-headers-$KERN_VER" "/lib/modules/$KERN_VER/build"
@@ -53,6 +58,9 @@ function install_guest_additions
     sh "$VBOX/VBoxLinuxAdditions.run" || true
 
     # Clean up
+    # uninstall packages that were added to build Guest Additions
+    dpkg --get-selections > /tmp/selections2
+    diff /tmp/selections /tmp/selections2 | sed -n 's/^> //p' | cut -f 1 | xargs apt-get purge -y
     umount "$VBOX"
     rmdir "$VBOX"
     rm "$ISO"

@@ -85,7 +85,7 @@ then
   BOX_SUFFIX="${BOX_SUFFIX}-${TYPE}"
 fi
 
-packer build -var "source=$OVA" \
+./packer build -var "source=$OVA" \
              -var "version=$VERSION" \
              -var "suffix=$BOX_SUFFIX" \
              -var "setup_args=$SETUP_ARGS" \
