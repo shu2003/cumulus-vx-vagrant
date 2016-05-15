@@ -34,7 +34,7 @@
       - [ 'cl-rctl interface clear %iface% ipv6 nd suppress-ra',
           'cl-rctl interface set %iface% ipv6 nd ra-interval 5'
         ]
-      - ansible_interfaces
+      - '{{ansible_interfaces}}'
     when: item[1] != "lo" and item[1] != "eth0" and ansible_{{ item[1] }}["active"]
 
   - name: Start BGP session on all active interfaces
@@ -48,7 +48,7 @@
           'cl-bgp timers set connect 10 neighbor %iface% ',
           'cl-bgp maximum-paths set 16'
         ]
-      - ansible_interfaces
+      - '{{ansible_interfaces}}'
     when: item[1] != "lo" and item[1] != "eth0" and ansible_{{ item[1] }}["active"]
 
   - name: Announce loopback IP address
