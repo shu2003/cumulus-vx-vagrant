@@ -138,4 +138,8 @@ then
   install_chef "$CHEF_VERSION"
 fi
 
+if [ /usr/sbin/ztp -e ]; then
+    /usr/sbin/ztp -R
+fi
+
 exit 0
