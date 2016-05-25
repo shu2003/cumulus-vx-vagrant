@@ -138,7 +138,7 @@ then
   install_chef "$CHEF_VERSION"
 fi
 
-if [ /usr/sbin/ztp -e ]; then
+if [ -e /usr/sbin/ztp ]; then
     /usr/sbin/ztp -R
 fi
 
