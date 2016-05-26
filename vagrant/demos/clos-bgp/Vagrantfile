@@ -11,7 +11,8 @@ require 'yaml'
 Vagrant.configure("2") do |config|
   properties = YAML.load_file("properties.yml")
 
-  config.vm.box = "CumulusCommunity/cumulus-vx"
+#  config.vm.box = "CumulusCommunity/cumulus-vx"
+  config.vm.box = "cumulus-vx-3.0.0"
 
   # Number of nodes to provision
   iter = 1
