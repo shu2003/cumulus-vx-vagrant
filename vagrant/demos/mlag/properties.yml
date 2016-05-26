@@ -9,6 +9,6 @@
 # network configuration. Be careful, changing these values can dramatically 
 # affect the number of VMs created.
 
-:hostsPerRack: 5
+:hostsPerRack: 2
 :racksPerPod:  2
 :podsPerDC:    1
