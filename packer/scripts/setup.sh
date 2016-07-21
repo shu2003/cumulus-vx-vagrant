@@ -42,6 +42,8 @@ function install_guest_additions
 
     KERN_VER=$(uname -r)
 
+    sleep 30
+
     # Install Guest Additions build dependencies
     if { sudo apt-get update -y 2>&1 || echo E: update failed; } | grep -q '^[WE]:'; then
         echo "### ERROR: COULD NOT UPDATE REPOS!"
